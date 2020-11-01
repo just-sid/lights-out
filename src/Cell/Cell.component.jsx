@@ -4,7 +4,7 @@ import './Cell.styles.css';
 const Cell = (props) => {
     let classes = "Cell" + (props.isLit ? " Cell-lit" : "");
     return (
-        <td className = {classes} />
+        <td className = {classes} onClick = {props.flipCellsAroundMe} />
     )
 }
 
