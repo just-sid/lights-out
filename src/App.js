@@ -3,9 +3,11 @@ import './App.css';
 import Board from './Board/Board.component';
 
 function App() {
+  /* let randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex]; */
   return (
     <div className="App">
-      <Board nrows = {5} ncols = {5}/>
+      <Board nrows = {5} ncols = {5} chanceLightStartsOn = {0.25}/>
     </div>
   );
 }
