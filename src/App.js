@@ -7,7 +7,7 @@ function App() {
     return arr[randomIndex]; */
   return (
     <div className="App">
-      <Board nrows = {5} ncols = {5} chanceLightStartsOn = {0.25}/>
+      <Board nrows = {5} ncols = {5} chanceLightStartsOn = {0.33}/>
     </div>
   );
 }

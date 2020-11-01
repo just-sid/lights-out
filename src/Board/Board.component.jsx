@@ -26,14 +26,21 @@ class Board extends Component {
     }
 
     render() {
+
+        let tblBoard = [];
+        for (let y=0; y < this.props.nrows; y++) {
+            let row = [];
+            for (let x =0; x<this.props.ncols; x++) {
+                let coord = `${y}-${x}`;
+                row.push(<Cell key = {coord} isLit = {this.state.board[y][x]} />);
+            }
+            tblBoard.push(<tr key = {y}>{row}</tr>);
+        }
+
         return(
             <table className = 'Board'>
                 <tbody>
-                    <tr>
-                        <Cell isLit = {true} />
-                        <Cell isLit = {false} />
-                        <Cell isLit = {true} />
-                    </tr>
+                    {tblBoard}
                 </tbody>
             </table>
         )
