@@ -42,11 +42,18 @@ class Board extends Component {
         flipCell(y-1, x);
         flipCell(y+1, x);
 
+        let hasWon = board.every(row => row.every(cell => !cell));
         this.setState({
-            board: board});
+            board: board,
+            hasWon: hasWon
+        });
     }
 
     render() {
+
+        if(this.state.hasWon)
+        return <h1>YOU WON</h1>
+
         let tblBoard = [];
         for (let y=0; y < this.props.nrows; y++) {
             let row = [];
